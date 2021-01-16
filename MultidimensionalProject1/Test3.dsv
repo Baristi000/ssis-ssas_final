@@ -1,0 +1,146 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="44c816b2-7179-4614-9ce3-440867082d00" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Test3</ID>
+  <Name>Test3</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Test3</DataSourceID>
+  <Schema>
+    <xs:schema id="Test3" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Test3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="32211ac9-0d4d-4a7a-acf0-cca66c45416d">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_FACT" msprop:design-time-name="4096d87e-a151-441f-99cf-7f3c04ccbd13" msprop:DbTableName="FACT" msprop:FriendlyName="FACT" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msprop:design-time-name="e07f7f92-9b54-4597-8cb6-c3e5662f1b6f" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:decimal" />
+                  <xs:element name="battery_power" msprop:design-time-name="72b78930-4045-4e22-a976-987acf3a8f98" msprop:DbColumnName="battery_power" msprop:FriendlyName="battery_power" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="clock_speed" msprop:design-time-name="5b029f3b-66a3-4eb2-a46c-4fa05adb5439" msprop:DbColumnName="clock_speed" msprop:FriendlyName="clock_speed" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="int_memory" msprop:design-time-name="a766b5c1-9b3f-4ba6-8ced-8e93e3b9bfb9" msprop:DbColumnName="int_memory" msprop:FriendlyName="int_memory" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="n_cores" msprop:design-time-name="61a3ab37-7240-4fc2-ba67-e12737ddcf92" msprop:DbColumnName="n_cores" msprop:FriendlyName="n_cores" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="ram" msprop:design-time-name="91816463-1113-4e03-a753-7bc3a919283b" msprop:DbColumnName="ram" msprop:FriendlyName="ram" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="price_range" msprop:design-time-name="94f3c010-b765-4db5-8c99-ae7ae4b3828d" msprop:DbColumnName="price_range" msprop:FriendlyName="price_range" type="xs:decimal" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_MEMORY" msprop:design-time-name="72e1ae29-9d96-4f61-9efe-cab7f976a849" msprop:DbTableName="MEMORY" msprop:FriendlyName="MEMORY" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="int_memory" msprop:design-time-name="39bc6f89-5dd9-4475-b396-ab7a9a9603b6" msprop:DbColumnName="int_memory" msprop:FriendlyName="int_memory" type="xs:decimal" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_RAM" msprop:design-time-name="40735fd7-29c7-43ff-a763-8cc62503bd3e" msprop:DbTableName="RAM" msprop:FriendlyName="RAM" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ram" msprop:design-time-name="c5b0fa83-f8a8-41a6-a8f7-ba371d31fe59" msprop:DbColumnName="ram" msprop:FriendlyName="ram" type="xs:decimal" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_CLOCK" msprop:design-time-name="3a5186f9-0f7c-4670-8ef4-284c8e64f879" msprop:DbTableName="CLOCK" msprop:FriendlyName="CLOCK" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="clock_speed" msprop:design-time-name="f0edb697-fe6a-4be5-bbef-25882a7d1f10" msprop:DbColumnName="clock_speed" msprop:FriendlyName="clock_speed" type="xs:decimal" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_NCORE" msprop:design-time-name="91cf651e-9f1e-4ee9-9e7f-0b9d62d73f25" msprop:DbTableName="NCORE" msprop:FriendlyName="NCORE" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="n_cores" msprop:design-time-name="2f7bb677-0218-42ba-b9d0-bf23b22b4949" msprop:DbColumnName="n_cores" msprop:FriendlyName="n_cores" type="xs:decimal" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_BATTERY" msprop:design-time-name="dcb6d92d-ca47-4fde-b6fc-30f3e05f3a65" msprop:DbTableName="BATTERY" msprop:FriendlyName="BATTERY" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="battery_power" msprop:design-time-name="5a378c77-8bce-471c-a016-cdd646b3ac0e" msprop:DbColumnName="battery_power" msprop:FriendlyName="battery_power" type="xs:decimal" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_FACT" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="dbo_MEMORY_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_MEMORY" />
+          <xs:field xpath="int_memory" />
+        </xs:unique>
+        <xs:unique name="dbo_RAM_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_RAM" />
+          <xs:field xpath="ram" />
+        </xs:unique>
+        <xs:unique name="dbo_CLOCK_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_CLOCK" />
+          <xs:field xpath="clock_speed" />
+        </xs:unique>
+        <xs:unique name="dbo_NCORE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_NCORE" />
+          <xs:field xpath="n_cores" />
+        </xs:unique>
+        <xs:unique name="dbo_BATTERY_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_BATTERY" />
+          <xs:field xpath="battery_power" />
+        </xs:unique>
+        <xs:keyref name="FK__FACT__battery_po__37A5467C" refer="dbo_BATTERY_Constraint1">
+          <xs:selector xpath=".//dbo_FACT" />
+          <xs:field xpath="battery_power" />
+        </xs:keyref>
+        <xs:keyref name="FK__FACT__n_cores__3A81B327" refer="dbo_NCORE_Constraint1">
+          <xs:selector xpath=".//dbo_FACT" />
+          <xs:field xpath="n_cores" />
+        </xs:keyref>
+        <xs:keyref name="FK__FACT__clock_spee__38996AB5" refer="dbo_CLOCK_Constraint1">
+          <xs:selector xpath=".//dbo_FACT" />
+          <xs:field xpath="clock_speed" />
+        </xs:keyref>
+        <xs:keyref name="FK__FACT__int_memory__398D8EEE" refer="dbo_MEMORY_Constraint1">
+          <xs:selector xpath=".//dbo_FACT" />
+          <xs:field xpath="int_memory" />
+        </xs:keyref>
+        <xs:keyref name="FK__FACT__ram__3B75D760" refer="dbo_RAM_Constraint1">
+          <xs:selector xpath=".//dbo_FACT" />
+          <xs:field xpath="ram" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Test3 xmlns="" />
+  </Schema>
+</DataSourceView>

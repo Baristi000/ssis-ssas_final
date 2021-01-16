@@ -1,0 +1,75 @@
+# count all data rows base on BATTERY capacity
+select non empty [Measures].[FACT Count] on 0,
+non empty [BATTERY].[Battery Power].members on 1
+from [Test3]
+
+# count all data rows base on CLOCK speed rate
+select non empty [Measures].[FACT Count] on 0,
+non empty [CLOCK].[Clock Speed].members on 1
+from [Test3]
+
+# count all data rows base on MEMORY capacity
+select non empty [Measures].[FACT Count] on 0,
+non empty [MEMORY].[Int Memory].members on 1
+from [Test3]
+
+# count all data rows base on number of cores processing
+select non empty [Measures].[FACT Count] on 0,
+non empty [NCORE].[n Cores].members on 1
+from [Test3]
+
+# count all data rows base on RAM capacity
+select non empty [Measures].[FACT Count] on 0,
+non empty [RAM].[Ram].members on 1
+from [Test3]
+
+# get maximum and minimum Price range base on BATTERY capacity
+select non empty {[Measures].[Maximum Price Range],[Measures].[Minimum Price Range]} on 0,
+non empty [BATTERY].[Battery Power].members on 1
+from [Test3]
+
+# get maximum and minimum Price range base on CLOCK speed rate
+select non empty {[Measures].[Maximum Price Range],[Measures].[Minimum Price Range]} on 0,
+non empty [CLOCK].[Clock Speed].members on 1
+from [Test3]
+
+# get maximum and minimum Price range base on MEMORY capacity
+select non empty {[Measures].[Maximum Price Range],[Measures].[Minimum Price Range]} on 0,
+non empty [MEMORY].[Int Memory].members on 1
+from [Test3]
+
+# get maximum and minimum Price range base on number of cores processing
+select non empty {[Measures].[Maximum Price Range],[Measures].[Minimum Price Range]} on 0,
+non empty [NCORE].[n Cores].members on 1
+from [Test3]
+
+# get maximum and minimum Price range base on RAM capacity
+select non empty {[Measures].[Maximum Price Range],[Measures].[Minimum Price Range]} on 0,
+non empty [RAM].[Ram].members on 1
+from [Test3]
+
+# get top 3 price of phone base on battery capacity with cores = 6
+select non empty [Measures].[Price Range] on 0,
+non empty topcount(([BATTERY].[Battery Power].members,{[NCORE].[n Cores].&[6.]}), 4, [Measures].[Price Range]) on 1
+from [Test3]
+
+# get all maximum price base on clock speed rate with core = 8
+select non empty [Measures].[Maximum Price Range] on 0,
+non empty filter([CLOCK].[Clock Speed].members, [NCORE].[n Cores].&[8.]) on 1
+from [Test3]
+
+# get number of phones base on number of cores processing and clock speed rate in two dims
+select non empty [NCORE].[n Cores].members on 0,
+non empty [CLOCK].[Clock Speed].members on 1
+from [Test3]
+
+# get number of phones base on number of cores processing and clock speed rate in two tabuler mode
+select non empty [Measures].[FACT Count] on 0,
+non empty ([CLOCK].[Clock Speed].members,[NCORE].[n Cores].members) on 1
+from [Test3]
+
+# get number of phones base on ram and clock speed rate where number of cores processing = 6
+select non empty [Measures].[FACT Count] on 0,
+non empty ([RAM].[Ram].members,[CLOCK].[Clock Speed].members) on 1
+from [Test3]
+where [NCORE].[n Cores].&[6.]
